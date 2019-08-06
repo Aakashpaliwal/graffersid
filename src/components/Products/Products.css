@@ -1,0 +1,244 @@
+.add-product-btn {
+    float: right;
+}
+/* .custom-table-here {
+    background: #fff;
+    padding: 20px;
+} */
+.custom-table-product {
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.05);
+    margin: auto;
+    margin-top: 16px;
+    padding: 30px 30px 20px;
+    margin-bottom: 20px;
+}
+.custom-table-product-here {
+    width: 100%;
+}
+.custom-table-product-here .prod-desc-td {
+    width: 400px;
+    word-break: break-all;
+}
+.custom-table-product-here .prod-desc-cat-td {
+    width: 600px;
+    word-break: break-all;
+}
+
+#page-numbers {
+    list-style: none;
+    text-align: center!important;
+  }
+  /* #page-numbers > li:active {
+      background: red!important;
+  } */
+  /* #page-numbers > li > .custom-pagination-li {
+      background: red!important;
+  } */
+  /* #page-numbers > li:focus {
+      background: red!important
+  } */
+  #page-numbers > li {
+    /* margin-right: 0.3em;
+    color: blue;
+    user-select: none;
+    cursor: pointer;
+    padding: 0 5px; */
+    cursor: pointer;
+    color: #03a9f3;
+padding: 8px 15px;
+text-decoration: none;
+border: 1px solid #03a9f3;
+/* border-top: 1px solid #bfbfbf;
+border-bottom: 1px solid #bfbfbf;
+border-left: 1px solid #bfbfbf; */
+border-radius: 50%;
+margin: 0 5px;
+font-size: 13px;
+  }
+  #page-numbers > li:hover {
+    background-color: #03a9f3;
+    color: #FFF;
+    }
+    /* #page-numbers > li:active {
+        background: #00c292;
+        color: #fff;
+    } */
+    
+    #page-numbers > li:active {
+
+        background-color: #03a9f3;
+        
+        color: #FFF;
+        
+        }
+        #page-numbers > li:focus{
+            background: #000;
+            color: #fff;
+        }
+        .custom-listitem {
+            text-align: center!important;
+        }
+.custom-listitem ul li {
+    display: inline-block;
+    text-align: center!important;
+}
+.custom-listitem > li {
+    text-align: center!important;
+}
+  /***********************table css here experiment***************************/
+  /*
+	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+	*/
+	@media
+  only screen 
+  and (max-width: 760px), (min-width: 768px) 
+  and (max-width: 1024px)  {
+    .custom-table-product-here .prod-desc-td {
+        width: 100%;
+        word-break: break-all;
+    }
+  /* Force table to not be like tables anymore */
+  .viewproduct-product-table-here table {
+    display: block
+  }
+  .viewproduct-product-table-here thead {
+    display: block
+  }
+  .viewproduct-product-table-here tbody {
+    display: block
+  }
+  .viewproduct-product-table-here th {
+    display: none
+  }
+  .viewproduct-product-table-here td {
+    display: block
+  }
+  .viewproduct-product-table-here tr {
+    display: block
+  }
+  /* .viewproduct-product-table-here table, thead, tbody, th, td, tr {
+    display: block;
+  } */
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .viewproduct-product-table-here > thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+ /* .viewproduct-product-table-here tr {
+    margin: 0 0 1rem 0;
+  } */
+  .viewproduct-product-table-here tr:nth-child(odd) {
+    background: #ccc;
+  }
+  
+  .viewproduct-product-table-here td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .viewproduct-product-table-here td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+  Label the data
+  You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+  */
+  .viewproduct-product-table-here td:nth-of-type(1):before { content: "Sr. No.";font-weight: 500;padding-top: 15px; }
+  .viewproduct-product-table-here td:nth-of-type(2):before { content: "Product Name";font-weight: 500;padding-top: 15px; }
+  .viewproduct-product-table-here td:nth-of-type(3):before { content: "Product Description";font-weight: 500;padding-top: 15px; }
+  .viewproduct-product-table-here td:nth-of-type(4):before { content: "Product Type";font-weight: 500;padding-top: 15px; }
+  .viewproduct-product-table-here td:nth-of-type(5):before { content: "Product Type Description";font-weight: 500;padding-top: 15px; }
+  .viewproduct-product-table-here td:nth-of-type(6):before { content: "Action";font-weight: 500;padding-top: 15px; }
+}
+
+  /*
+	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+	*/
+	@media
+  only screen 
+  and (max-width: 760px), (min-width: 768px) 
+  and (max-width: 1024px)  {
+    .custom-table-product-here .prod-desc-cat-td {
+        width: 100%;
+        word-break: break-all;
+    }
+  /* Force table to not be like tables anymore */
+  .viewproductcategory-product-table-here table {
+    display: block
+  }
+  .viewproductcategory-product-table-here thead {
+    display: block
+  }
+  .viewproductcategory-product-table-here tbody {
+    display: block
+  }
+  .viewproductcategory-product-table-here th {
+    display: none
+  }
+  .viewproductcategory-product-table-here td {
+    display: block
+  }
+  .viewproductcategory-product-table-here tr {
+    display: block
+  }
+  /* .viewproduct-product-table-here table, thead, tbody, th, td, tr {
+    display: block;
+  } */
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .viewproductcategory-product-table-here > thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+ /* .viewproduct-product-table-here tr {
+    margin: 0 0 1rem 0;
+  } */
+  .viewproductcategory-product-table-here tr:nth-child(odd) {
+    background: #ccc;
+  }
+  
+  .viewproductcategory-product-table-here td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .viewproductcategory-product-table-here td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+  Label the data
+  You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+  */
+  .viewproductcategory-product-table-here td:nth-of-type(1):before { content: "Name";font-weight: 500;padding-top: 15px; }
+  .viewproductcategory-product-table-here td:nth-of-type(2):before { content: "Description";font-weight: 500;padding-top: 15px; }
+  .viewproductcategory-product-table-here td:nth-of-type(3):before { content: "Action";font-weight: 500;padding-top: 15px; }
+}

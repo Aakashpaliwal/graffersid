@@ -1,0 +1,360 @@
+.add-customer-btn {
+    float: right;
+}
+.custom-date-form {
+    background: #fff;
+    padding: 20px;
+}
+.custom-shoe-table-btn {
+    float: left;
+}
+.tooltip-toggle-download-btn {
+    cursor: pointer;
+    position: relative;
+
+}
+.tooltip-toggle-download-btn::before {
+    position: absolute;
+    top: 3px;
+    left: 348px;
+    background-color: #2B222A;
+    border-radius: 5px;
+    color: #fff;
+    content: attr(aria-label);
+    padding: 2px;
+    text-transform: none;
+    transition: all 0.5s ease;
+    width: 120px;
+  }
+  .tooltip-toggle-download-btn::after {
+    position: absolute;
+    top: 13px;
+    left: 470px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #2B222A;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin-left: -5px;
+    width: 0;
+    transform: rotate(270deg);
+  }
+  .tooltip-toggle-download-btn::before, .tooltip-toggle-download-btn::after {
+    color: #efefef;
+    font-family: monospace;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+  }
+  .tooltip-toggle-download-btn:focus::before, .tooltip-toggle-download-btn:focus::after, .tooltip-toggle-download-btn:hover::before, .tooltip-toggle-download-btn:hover::after {
+    opacity: 1;
+    transition: all 0.75s ease;
+  }
+  .custom-customer-table-here {
+      width: 100%;
+  }
+  .custom-customer-table-here .user-location-td {
+    width: 130px!important;
+    word-break : break-all;
+  }
+  .custom-table-product table  tr {
+    cursor: pointer;
+  }
+  .custom-shop-product-table-here tbody tr {
+    cursor: pointer;
+  }
+  /***********************table css here experiment***************************/
+  /*
+	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+	*/
+	@media
+  only screen 
+  and (max-width: 760px), (min-device-width: 768px) 
+  and (max-device-width: 1024px)  {
+
+  /* Force table to not be like tables anymore */
+  .customerhistory-product-table-here table {
+    display: block
+  }
+  .customerhistory-product-table-here thead {
+    display: block
+  }
+  .customerhistory-product-table-here tbody {
+    display: block
+  }
+  .customerhistory-product-table-here th {
+    display: none
+  }
+  .customerhistory-product-table-here td {
+    display: block
+  }
+  .customerhistory-product-table-here tr {
+    display: block
+  }
+  /* .customerhistory-product-table-here table, thead, tbody, th, td, tr {
+    display: block;
+  } */
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .customerhistory-product-table-here > thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+ .customerhistory-product-table-here tr {
+    margin: 0 0 1rem 0;
+  }
+    
+  .customerhistory-product-table-here tr:nth-child(odd) {
+    background: #ccc;
+  }
+  
+  .customerhistory-product-table-here td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .customerhistory-product-table-here td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+  Label the data
+  You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+  */
+  .customerhistory-product-table-here td:nth-of-type(1):before { content: "Employe Name"; }
+  .customerhistory-product-table-here td:nth-of-type(2):before { content: "Total Payment"; }
+  .customerhistory-product-table-here td:nth-of-type(3):before { content: "Date Of Delivery"; }
+
+}
+
+/*******************new table experiment here ********************************/
+/********************table experiment here************************************/
+@media only screen and (max-width: 500px) and (min-width: 320px) {
+  .custom-customer-table-here .user-location-td {
+    width: 100%!important;
+    word-break : break-all;
+  }
+  .custom-customer-table-here .media-query-btn {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 40%!important;
+  }
+}
+  /*
+Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+*/
+@media
+only screen 
+and (max-width: 760px), (min-width: 768px) 
+and (max-width: 1024px)  {
+/* Force table to not be like tables anymore */
+.required-table-media-query table {
+  display: block
+}
+.required-table-media-query thead {
+  display: block
+}
+.required-table-media-query tbody {
+  display: block
+}
+.required-table-media-query th {
+  display: none
+}
+.required-table-media-query td {
+  display: block
+}
+.required-table-media-query tr {
+  display: block
+}
+/* .viewproduct-product-table-here table, thead, tbody, th, td, tr {
+  display: block;
+} */
+
+/* Hide table headers (but not display: none;, for accessibility) */
+.required-table-media-query > thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* .viewproduct-product-table-here tr {
+  margin: 0 0 1rem 0;
+} */
+.required-table-media-query tr:nth-child(odd) {
+  background: #ccc;
+}
+
+.required-table-media-query td {
+  /* Behave  like a "row" */
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 50%;
+}
+/* .required-table-media-query .media-query-btn {
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 30%;
+} */
+
+.required-table-media-query td:before {
+  /* Now like a table header */
+  position: absolute;
+  /* Top/left values mimic padding */
+  top: 0;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+/*
+Label the data
+You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+*/
+.required-table-media-query td:nth-of-type(1):before { content: "Shop Name";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(2):before { content: "Shop Contact Number";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(3):before { content: "Owner's Detail";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(4):before { content: "Shop Location";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(6):before { content: "Action";font-weight: 500;padding-top: 15px; }
+}
+
+
+/********************table experiment here************************************/
+@media only screen and (max-width: 500px) and (min-width: 320px) {
+  .custom-customer-table-here .user-location-td {
+    width: 100%!important;
+    word-break : break-all;
+  }
+  .custom-customer-table-here .media-query-btn {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 40%!important;
+  }
+}
+  /*
+Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+*/
+@media
+only screen 
+and (max-width: 760px), (min-width: 768px) 
+and (max-width: 1024px)  {
+  .custom-employe-table-here .area-name-td {
+    width: 100%!important;
+    word-break : break-all;
+  }
+  .custom-emp-alloc-table-here .emp-alloc-name {
+    width: 100%;
+    word-break: break-all;
+  }
+/* Force table to not be like tables anymore */
+.required-table-media-query table {
+  display: block
+}
+.required-table-media-query thead {
+  display: block
+}
+.required-table-media-query tbody {
+  display: block
+}
+.required-table-media-query th {
+  display: none
+}
+.required-table-media-query td {
+  display: block
+}
+.required-table-media-query tr {
+  display: block
+}
+/* .viewproduct-product-table-here table, thead, tbody, th, td, tr {
+  display: block;
+} */
+
+/* Hide table headers (but not display: none;, for accessibility) */
+.required-table-media-query > thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* .viewproduct-product-table-here tr {
+  margin: 0 0 1rem 0;
+} */
+.required-table-media-query tr:nth-child(odd) {
+  background: #ccc;
+}
+
+.required-table-media-query td {
+  /* Behave  like a "row" */
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 50%;
+}
+/* .required-table-media-query .media-query-btn {
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 30%;
+} */
+
+.required-table-media-query td:before {
+  /* Now like a table header */
+  position: absolute;
+  /* Top/left values mimic padding */
+  top: 0;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+/*
+Label the data
+You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+*/
+.required-table-media-query td:nth-of-type(1):before { content: "Shop Name";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(2):before { content: "Product Name";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(3):before { content: "Product Category";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(4):before { content: "Quantity";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(5):before { content: "Employe Name";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(6):before { content: "Employe Mobile";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(7):before { content: "Employe Mail";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(8):before { content: "Date Of Order";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(9):before { content: "Location";font-weight: 500;padding-top: 15px; }
+.required-table-media-query td:nth-of-type(10):before { content: "Action";font-weight: 500;padding-top: 15px; }
+}
+
+
+.loading2 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(100,100,100,.2 );
+  border-radius: 50%;
+  border-top-color: rgba(100,100,100,.7 );
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  
+  /* left: calc(50% - 15px);
+  top: calc(78% - 15px);
+  position: fixed;
+  z-index: 1; */
+  }

@@ -1,0 +1,94 @@
+.below-custom-form {
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.05);
+    margin: auto;
+    margin-top: 16px;
+    padding: 30px 30px 20px;
+    margin-bottom:20px;
+}
+.custom-inventory-table-here {
+    width: 100%;
+}
+.custom-inventory-table-here .inventory-prod-name {
+    width: 400px;
+    word-break: break-all;
+}
+/********************table responsive here***********************/
+  /*
+Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+*/
+@media
+only screen 
+and (max-width: 760px), (min-width: 768px) 
+and (max-width: 1024px)  {
+/* Force table to not be like tables anymore */
+.inventory-media-query-table table {
+  display: block
+}
+.inventory-media-query-table thead {
+  display: block
+}
+.inventory-media-query-table tbody {
+  display: block
+}
+.inventory-media-query-table th {
+  display: none
+}
+.inventory-media-query-table td {
+  display: block
+}
+.inventory-media-query-table tr {
+  display: block
+}
+/* .viewproduct-product-table-here table, thead, tbody, th, td, tr {
+  display: block;
+} */
+
+/* Hide table headers (but not display: none;, for accessibility) */
+.inventory-media-query-table > thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* .inventory-media-query-table tr {
+  margin-bottom: 20px;
+} */
+.inventory-media-query-table tr:nth-child(odd) {
+  background: #ccc;
+}
+
+.inventory-media-query-table td {
+  /* Behave  like a "row" */
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 50%;
+}
+/* .inventory-media-query-table .media-query-btn {
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 30%;
+} */
+
+.inventory-media-query-table td:before {
+  /* Now like a table header */
+  position: absolute;
+  /* Top/left values mimic padding */
+  top: 0;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+/*
+Label the data
+You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+*/
+.inventory-media-query-table td:nth-of-type(1):before { content: "Product Name";font-weight: 500;padding-top: 15px; }
+.inventory-media-query-table td:nth-of-type(2):before { content: "Product Category";font-weight: 500;padding-top: 15px; }
+.inventory-media-query-table td:nth-of-type(3):before { content: "In Stock";font-weight: 500;padding-top: 15px; }
+}
