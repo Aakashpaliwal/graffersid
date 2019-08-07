@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import axios from "axios";
 class Sidebar extends Component {
   render() {
     return (
