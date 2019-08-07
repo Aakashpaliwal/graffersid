@@ -5,7 +5,7 @@ class Footer extends Component {
         return (
             <div>
                 <footer>
-                    Powered By <a href="https://www.fsjars.com/" target="_blank"> <strong>FSJARS</strong></a>
+                    Powered By <a href="https://github.com/Aakashpaliwal" target="_blank"> <strong>AAKASH404</strong></a>
                 </footer>
             </div>
         );

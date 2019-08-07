@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link, Redirect, withRouter } from "react-router-dom";
 import "./Area.css";
-// import Griddle, { plugins, RowDefinition, ColumnDefinition, LocalPlugin} from 'griddle-react';
 import ReactTable from "react-table";
 // import "react-table/react-table.css"
 export class Newarea extends Component {
@@ -40,10 +38,6 @@ export class Newarea extends Component {
         deliverytime: "16-12-18",
         deliveryontime: "90 %",
         status: "delivered"
-        // friend: {
-        //   name: "Jason Maurer",
-        //   age: 23
-        // }
       },
       {
         jobno: "#065",
@@ -53,10 +47,6 @@ export class Newarea extends Component {
         deliverytime: "16-12-19",
         deliveryontime: "70 %",
         status: "In-progress"
-        // friend: {
-        //   name: "Jason Maurer",
-        //   age: 23
-        // }
       },
       {
         jobno: "#070",
@@ -66,10 +56,6 @@ export class Newarea extends Component {
         deliverytime: "16-07-18",
         deliveryontime: "85 %",
         status: "Pending"
-        // friend: {
-        //   name: "Jason Maurer",
-        //   age: 23
-        // }
       },
       {
         jobno: "#095",
@@ -79,10 +65,6 @@ export class Newarea extends Component {
         deliverytime: "16-01-18",
         deliveryontime: "65 %",
         status: "Cancelled"
-        // friend: {
-        //   name: "Jason Maurer",
-        //   age: 23
-        // }
       },
       {
         jobno: "#076",
@@ -92,10 +74,6 @@ export class Newarea extends Component {
         deliverytime: "16-12-19",
         deliveryontime: "90 %",
         status: "Delivered"
-        // friend: {
-        //   name: "Jason Maurer",
-        //   age: 23
-        // }
       },
       {
         jobno: "#044",
@@ -105,10 +83,6 @@ export class Newarea extends Component {
         deliverytime: "16-12-18",
         deliveryontime: "90 %",
         status: "delivered"
-        // friend: {
-        //   name: "Jason Maurer",
-        //   age: 23
-        // }
       },
       {
         jobno: "#061",
@@ -118,16 +92,12 @@ export class Newarea extends Component {
         deliverytime: "16-12-18",
         deliveryontime: "90 %",
         status: "delivered"
-        // friend: {
-        //   name: "Jason Maurer",
-        //   age: 23
-        // }
       }
     ];
     const columns = [
       {
         Header: <strong>Job No</strong>,
-        accessor: "jobno", // String-based value accessors!
+        accessor: "jobno",
         Cell: props => (
           <span className="number">
             <center>{props.value}</center>
@@ -141,7 +111,7 @@ export class Newarea extends Component {
           <span className="number">
             <center>{props.value}</center>
           </span>
-        ) // Custom cell components!
+        )
       },
       {
         Header: <strong>Carrier Name</strong>,
@@ -150,7 +120,7 @@ export class Newarea extends Component {
           <span className="number">
             <center>{props.value}</center>
           </span>
-        ) // Custom cell components!
+        )
       },
       {
         Header: <strong>Pick Up Time</strong>,
@@ -159,7 +129,7 @@ export class Newarea extends Component {
           <span className="number">
             <center>{props.value}</center>
           </span>
-        ) // Custom cell components!
+        )
       },
       {
         Header: <strong>Delivery Time</strong>,
@@ -168,7 +138,7 @@ export class Newarea extends Component {
           <span className="number">
             <center>{props.value}</center>
           </span>
-        ) // Custom cell components!
+        )
       },
       {
         Header: <strong>Delivery On Time</strong>,
@@ -177,7 +147,7 @@ export class Newarea extends Component {
           <span className="number">
             <center>{props.value}</center>
           </span>
-        ) // Custom cell components!
+        )
       },
       {
         Header: <strong>Status</strong>,
@@ -186,17 +156,8 @@ export class Newarea extends Component {
           <span className="number">
             <center>{props.value}</center>
           </span>
-        ) // Custom cell components!
+        )
       }
-      //   {
-      //     id: "friendName", // Required because our accessor is not a string
-      //     Header: "Friend Name",
-      //     accessor: d => d.friend.name // Custom value accessors!
-      //   },
-      //   {
-      //     Header: props => <span>Friend Age</span>, // Custom header components!
-      //     accessor: "friend.age"
-      //   }
     ];
     return (
       <React.Fragment>
@@ -215,7 +176,11 @@ export class Newarea extends Component {
                         <li class="breadcrumb-item">
                           <a href="#">Orders</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page" style={{color : '#edbf00'}}>
+                        <li
+                          class="breadcrumb-item active"
+                          aria-current="page"
+                          style={{ color: "#edbf00" }}
+                        >
                           All
                         </li>
                       </ol>
@@ -229,59 +194,88 @@ export class Newarea extends Component {
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <div className="custom-table-product">
                         <div className="row">
-                          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            {/* <p>{this.state.current_date_time}</p> */}
+                          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center center-block">
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a class="social-icon text-xs-center">
+                                  <i class="fa fa-clone" aria-hidden="true" />
+                                  &nbsp;&nbsp;Copy{" "}
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a class="social-icon text-xs-center">
+                                  <i class="fa fa-trash-o" aria-hidden="true" />
+                                  &nbsp;&nbsp;Delete
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a class="social-icon text-xs-center">
+                                  <i
+                                    class="fa fa-download"
+                                    aria-hidden="true"
+                                  />
+                                  &nbsp;&nbsp;Download
+                                </a>
+                              </li>
+
+                              <li class="list-inline-item">
+                                <div class="form-group">
+                                  <select
+                                    class="form-control"
+                                    id="exampleFormControlSelect1"
+                                  >
+                                    <option>All Customer</option>
+                                    <option>VIP</option>
+                                    <option>VIP</option>
+                                  </select>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div className="side-content">
+                              <div className="row">
+                                <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                  <p style={{ paddingTop: "10px" }}>
+                                    {this.state.search_input}
+                                  </p>
+                                </div>
+                                <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                  <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span
+                                        class="input-group-text"
+                                        id="basic-addon1"
+                                      >
+                                        <i
+                                          class="fa fa-search"
+                                          aria-hidden="true"
+                                        />
+                                      </span>
+                                    </div>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      aria-label="Username"
+                                      aria-describedby="basic-addon1"
+                                      value={this.state.search_input}
+                                      name="search_input"
+                                      onChange={e => this.change(e)}
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <p style={{ paddingTop: "10px" }}>
                               {this.state.time}
                             </p>
                           </div>
-                          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <p style={{ paddingTop: "10px" }}>
-                              {this.state.search_input}
-                            </p>
-                          </div>
-                          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <div class="input-group mb-3">
-                              <div class="input-group-prepend">
-                                <span
-                                  class="input-group-text"
-                                  id="basic-addon1"
-                                >
-                                  <i class="fa fa-search" aria-hidden="true" />
-                                </span>
-                              </div>
-                              <input
-                                type="text"
-                                class="form-control"
-                                aria-label="Username"
-                                aria-describedby="basic-addon1"
-                                value={this.state.search_input}
-                                name="search_input"
-                                onChange={e => this.change(e)}
-                              />
-                            </div>
-                            <br />
-                            <br />
-                          </div>
                         </div>
                         <div className="row">
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            {/* {areatableshow} */}
-                            {/* <Griddle data={data} plugins={[LocalPlugin]}>
-                              <RowDefinition>
-                                <ColumnDefinition id="name" title="Name" />
-                                <ColumnDefinition
-                                  id="state"
-                                  title="Location"
-                                  order={1}
-                                  width={400}
-                                />
-                                <ColumnDefinition
-                                  id="company"
-                                  title="Organization"
-                                />
-                              </RowDefinition>
-                            </Griddle> */}
                             <ReactTable
                               data={data}
                               columns={columns}

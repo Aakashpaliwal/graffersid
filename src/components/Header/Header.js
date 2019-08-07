@@ -35,9 +35,9 @@ class Header extends Component {
   
 
     render() {
-        const isSignedIn = this.props.isSignedIn;
-        const onRouteChange = this.props.onRouteChange;
-        if (localStorage.getItem('tokenKey')) {
+        // const isSignedIn = this.props.isSignedIn;
+        // const onRouteChange = this.props.onRouteChange;
+        // if (localStorage.getItem('tokenKey')) {
         return (
                <div className="skin-blue fixed-layout">
                <header className="topbar custom-topbar-bg">
@@ -173,7 +173,7 @@ class Header extends Component {
                                  
                                 <div className="dropdown-divider"></div>
                                  
-                                <a onClick={() => onRouteChange('signout')} className="dropdown-item"><i className="fa fa-power-off"></i> Logout</a>
+                                <a className="dropdown-item"><i className="fa fa-power-off"></i> Logout</a>
                                
                             </div>
                          {/* <button type="button" className="btn btn-info logout-btn" onClick = {e => this.onLogout(e)}>LOG OUT</button>  */}
@@ -188,10 +188,10 @@ class Header extends Component {
                 
            
         );
-    }else{
-        return(<div>
+    // }else{
+    //     return(<div>
 
-        </div>);}
+    //     </div>);}
 }
 }
 

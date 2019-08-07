@@ -53,7 +53,7 @@ class Sidebar extends Component {
                     data-toggle="collapse"
                     data-target="#submenu4"
                   >
-                    <i className="fa fa-cubes" aria-hidden="true" />
+                   <i class="fa fa-truck" aria-hidden="true"></i>
                     <span className="hide-menu"> Orders</span>
                   </a>
                   <ul aria-expanded="false" className="collapse" id="submenu4">

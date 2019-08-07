@@ -16,6 +16,22 @@
 .custom-top-para-invoice h4, p {
     font-size: 14px!important;
 }
+.custom-table-product {
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.05);
+  margin: auto;
+  margin-top: 16px;
+  padding: 30px 30px 20px;
+  margin-bottom: 20px;
+}
+.custom-table-product ul {
+  padding-top: 10px;
+}
+.custom-table-product ul li {
+  color: #4399fe;
+  padding: 0 5px;
+}
 /************************react table css**********************************/
 .ReactTable {
     position: relative;

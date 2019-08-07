@@ -9782,7 +9782,7 @@ Notify
     height: 25px;
     width: 25px;
     z-index: 10;
-    border: 5px solid #e46a76;
+    /* border: 5px solid #e46a76; */
     border-radius: 70px;
     -moz-animation: heartbit 1s ease-out;
     -moz-animation-iteration-count: infinite;
@@ -9797,7 +9797,7 @@ Notify
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
-    background-color: #e46a76;
+    background-color: #edbf00;
     position: absolute;
     right: 6px;
     top: -10px; }
