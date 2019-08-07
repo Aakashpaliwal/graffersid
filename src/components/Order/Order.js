@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Area.css";
 import ReactTable from "react-table";
 // import "react-table/react-table.css"
-export class Newarea extends Component {
+export class Order extends Component {
   constructor() {
     super();
     this.state = {
@@ -168,10 +168,10 @@ export class Newarea extends Component {
                 <div className="row page-titles">
                   <div
                     className="col-md-5 align-self-center"
-                    style={{ marginTop: "70px" }}
+                    // style={{ marginTop: "70px" }}
                   >
-                    {/* <h4 className="text-themecolor">Forms</h4> */}
-                    <nav aria-label="breadcrumb">
+                    <h4 className="text-themecolor">Forms</h4>
+                    {/* <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                           <a href="#">Orders</a>
@@ -184,7 +184,7 @@ export class Newarea extends Component {
                           All
                         </li>
                       </ol>
-                    </nav>
+                    </nav> */}
                   </div>
                 </div>
               </div>
@@ -296,4 +296,4 @@ export class Newarea extends Component {
   }
 }
 
-export default Newarea;
+export default Order;

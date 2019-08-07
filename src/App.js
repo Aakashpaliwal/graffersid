@@ -7,7 +7,7 @@ import Home from "./components/Home/Home";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { Route, Redirect } from "react-router-dom";
 
-import { Newarea } from "./components/Area/Newarea";
+import { Order } from "./components/Order/Order";
 
 class App extends Component {
   render() {
@@ -19,8 +19,8 @@ class App extends Component {
 
         <Route
           exact
-          path={process.env.PUBLIC_URL + "/newarea"}
-          component={Newarea}
+          path={process.env.PUBLIC_URL + "/order"}
+          component={Order}
         />
         <Footer />
       </div>
